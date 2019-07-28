@@ -1,0 +1,124 @@
+var $mngConfig = {
+  "game_base_id": 97,
+  "pc": {
+    "host": "http://blhx.biligame.com/",
+    "android_link": "https://pkg.biligame.com/games/blhx_2.0.0.10_45_20190516_115405_27d58.apk ",
+    "android_link2": "https://pkgdl.biligame.net/games/blhx_2.0.0.10_45_20190516_115405_27d58.apk ",
+    "big_link": "",
+    "big_link2": "",
+    "banners": [
+      {
+        "link": "https://www.bilibili.com/blackboard/activity-mlynfyx.html",
+        "image": "//i2.hdslb.com/bfs/game/3d52903426a13370809e896daf9b442955260de5.jpg"
+      }
+    ]
+  },
+  "h5": {
+    "host": "http://blhx.biligame.com/",
+    "android_link": "https://pkg.biligame.com/games/blhx_2.0.0.10_45_20190516_115405_27d58.apk ",
+    "android_link2": "https://pkgdl.biligame.net/games/blhx_2.0.0.10_45_20190516_115405_27d58.apk ",
+    "big_link": "",
+    "big_link2": "",
+    "banners": [
+      {
+        "link": "https://www.bilibili.com/blackboard/activity-mlynfyx-m.html",
+        "image": "//i2.hdslb.com/bfs/game/e97989e033235a2e61614d4e63662988de128437.jpg"
+      }
+    ]
+  },
+  "app_id": 72,
+  "extra": {
+    "baidusem": "https://pkg.biligame.com/games/blhx_v2.0.0_bdSEM_069339.apk",
+    "pc_ios_url": "https://itunes.apple.com/cn/app/bi-lan-hang-xian/id1170457573",
+    "h5_ios_url": "https://itunes.apple.com/cn/app/bi-lan-hang-xian/id1170457573",
+    "weixin_url": "javascript:alert('请点击右上角在浏览器中打开');",
+    "ios_weibo_url": "javascript:alert('请点击右上角在浏览器中打开');",
+    "ios_neteasemusic_url": "javascript:alert('请点击右上角在浏览器中打开');",
+    "qqList": [],
+    "pc_yy_banners": [
+      {
+        "link": "javascript:;",
+        "image": "//i2.hdslb.com/bfs/game/085237ad76306626ee83754cb23b4c198335c4cc.jpg"
+      }
+    ],
+    "h5_yy_banners": [
+      {
+        "link": "javascript:;",
+        "image": "//i2.hdslb.com/bfs/game/085237ad76306626ee83754cb23b4c198335c4cc.jpg"
+      }
+    ],
+    "pc_emu_mumu": "javascript:alert('敬请期待');",
+    "pc_emu_landie": "javascript:alert('敬请期待');",
+    "pc_emu_tengxun": "javascript:alert('敬请期待');",
+    "pc_emu_xiaoyao": "javascript:alert('敬请期待');",
+    "2nd_anniversary": {
+      "h5_pv": "https://m.bilibili.com/video/av52737589.html",
+      "h5_p2_detail_link": "https://www.bilibili.com/read/cv2702323",
+      "pc": {
+        "pvid": "52737589",
+        "lifu": "https://www.bilibili.com/read/cv2702323"
+      },
+      "h5_links": [
+        "http://tb.cn/vrJRJ9w",
+        "",
+        "https://m.tb.cn/h.eWk2qnA?sm=7fab9c",
+        "https://game.bilibili.com/blhx/zxgbql-h5",
+        "",
+        "https://www.bilibili.com/blackboard/activity-jH7BIok09.html"
+      ],
+      "pc_links": [
+        "https://detail.tmall.com/item.htm?spm=a212k0.12153887.0.0.232b687d7uFvNk&id=595362377376",
+        "",
+        "https://item.taobao.com/item.htm?spm=a2oq0.12575281.0.0.6bcf1debBmCFgs&ft=t&id=594876918811",
+        "https://game.bilibili.com/blhx/zxgbql",
+        "",
+        ""
+      ],
+      "hololive": {
+        "pc": [
+          "53723050",
+          "53785501",
+          "53914217",
+          "53988528",
+          "53914073",
+          "53964364"
+        ],
+        "h5": [
+          "https://m.bilibili.com/video/av53723050.html",
+          "https://m.bilibili.com/video/av53785501.html",
+          "https://m.bilibili.com/video/av53914217.html",
+          "https://m.bilibili.com/video/av53988528.html",
+          "https://m.bilibili.com/video/av53914073.html",
+          "https://m.bilibili.com/video/av53964364.html"
+        ]
+      },
+      "showIpad": "true"
+    },
+    "fbqx_android_downloadurl": "https://pkg.biligame.com/games/blhx_v2.0.0_bdtbjk_092949.apk"
+  }
+};
+$mngConfig.pc = $mngConfig.pc || {};
+$mngConfig.h5 = $mngConfig.h5 || {};
+var $config = {
+	pc: JSON.parse(JSON.stringify($mngConfig.pc)),
+	h5: JSON.parse(JSON.stringify($mngConfig.h5)),
+	pc_android_url: $mngConfig.pc.android_link,
+	pc_android_url_http: $mngConfig.pc.android_link2,
+	h5_android_url: $mngConfig.h5.android_link,
+	h5_android_url_http: $mngConfig.h5.android_link2,
+	pc_big_link: $mngConfig.pc.big_link,
+	pc_big_link2: $mngConfig.pc.big_link2,
+	h5_big_link: $mngConfig.h5.big_link,
+	h5_big_link2: $mngConfig.h5.big_link2,
+	app_id: $mngConfig.app_id,
+	game_base_id: $mngConfig.game_base_id,
+	biliapp_url: "javascript:biliapp.openScheme('{\"url\":\"bilibili://game_center/detail?id=" + $mngConfig.game_base_id + "&sourceType=outside&sourceFrom=1742\"}')"
+};
+if ($mngConfig.extra) {
+	var extra = JSON.parse(JSON.stringify($mngConfig.extra));
+	for (var k in extra) {
+		if (Object.prototype.hasOwnProperty.call(extra, k)) {
+			$config[k] = extra[k];
+		}
+	}
+}
