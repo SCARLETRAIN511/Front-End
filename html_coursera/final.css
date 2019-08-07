@@ -1,0 +1,39 @@
+h1{
+    background: #B3B3B3;
+    color: aliceblue;
+    font-size: 150%;
+}
+header{
+    background: #cecece;
+    text-align: center;
+}
+nav{
+    font-variant: small-caps;
+    font-size: 150%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    color:rgb(255, 145, 0);
+    
+}
+details{
+    font-style: italic;
+}
+
+summary{
+    font-style: normal;
+}
+
+div{
+    height: 100px;
+    width: 1000px;
+    background: #666666;
+}
+
+span{
+    display: inline-block;
+    height: 300px;
+    width: 800px;
+    background:orange;
+}
