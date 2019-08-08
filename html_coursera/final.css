@@ -1,12 +1,25 @@
-h1{
+body{
     background: #B3B3B3;
-    color: aliceblue;
     font-size: 150%;
+    margin: 4%;
 }
 header{
-    background: #cecece;
+    background: #666666;
     text-align: center;
+    padding: 25px;
 }
+
+h1{
+    background: #ffffff;
+}
+section{
+    width: 30%;
+    display: inline-block;
+    float: left;
+    margin-right: 3%;
+    margin-bottom: 10px;
+}
+
 nav{
     font-variant: small-caps;
     font-size: 150%;
@@ -15,7 +28,8 @@ nav{
 
 h2{
     color:rgb(255, 145, 0);
-    
+    background-color: aqua;
+       
 }
 details{
     font-style: italic;
@@ -25,15 +39,26 @@ summary{
     font-style: normal;
 }
 
-div{
+footer{
+    margin-top: 10%;
+    background-color: #666666;
+    clear: both;
     height: 100px;
-    width: 1000px;
-    background: #666666;
 }
 
-span{
+img{
+    width: 100px;
+}
+nav a{
+    text-align: center;
+    color: #ffffff;
+    background: #0000ff;
     display: inline-block;
-    height: 300px;
-    width: 800px;
-    background:orange;
+    width: 20%;
+    margin-right: 2%;
+}
+.current{
+    color: #000000;
+    background: #0FFF00;
+    text-transform: uppercase;
 }
