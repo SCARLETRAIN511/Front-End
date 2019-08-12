@@ -1,0 +1,133 @@
+
+header {
+    background-image: url("../Images/flywheel.jpg");
+    background-size:100%;
+    padding: 30px;
+
+}
+body{
+    margin:2%;
+}
+nav{
+    text-align: center;
+    height:120px;
+    font-weight: bold;
+}
+nav a{
+    display: inline-block;
+    margin: 2%;
+    -webkit-border-radius: 3;
+	-moz-border-radius: 3;
+	-o-border-radius: 3;
+    border-radius: 5px;
+    
+    text-decoration:none;
+    padding: 2%;
+
+    color: #000000;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(233, 233, 233, 0.295);
+    width: 15%;
+    min-width: 120px;
+    height: 10px;
+}
+.active{
+    background-color: #ffffff;
+    color: #070044;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+    font-size: xx-large;
+    height:5px;
+}
+
+.left{
+    background: #416d0f;
+    width:16%;
+    float: left;
+    min-width: 175px;
+    height: 100vh;
+    margin-right: 2px;
+
+}
+.left img{
+    margin-top: 6%;
+    margin-left: 7%;
+    margin-bottom: 5%;
+    display: inline-block;
+    height: 100px;
+    width: 150px;
+    border-style:solid;
+    border-color: #000000;
+    border-width: 2px;
+}
+
+.right{
+    width:80%;
+    display: inline-block;
+    padding-left: 2%;
+}
+
+table{
+    margin-left: 8%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110%;
+    width: 80%;
+
+}
+
+tr{
+    opacity: 0.6;
+}
+
+tr:hover{
+    opacity: 1;
+}
+
+tr:first-child{
+    opacity: 1;
+}
+
+th{
+    background: #869253;
+    background: -webkit-linear-gradient(#99a761,#556b2f);
+    background: -o-linear-gradient(#99a761,#556b2f);
+    background:-moz-linear-gradient(#99a761,#556b2f);
+    background:linear-gradient(#99a761,#556b2f);
+    color:#ffffff;
+    border:1px solid #9acd32;
+    border-radius:6px 6px 0 0;
+    height: 35px;
+    line-height: 35px;
+}
+
+th:first-child{
+    padding-left: 10px;
+    text-align: left;
+}
+
+td{
+    padding: 5x;
+    background: #d9eccf;
+    color:#2f2f2f;
+    border:1px;
+    border-radius:2px;
+    height:30px;
+    line-height: 30px;
+    text-align:center;
+    text-shadow: 0.2px 0.2px #000000;
+
+}
+
+td:first-child{
+    padding-left: 10px;
+    text-align:left;
+}
