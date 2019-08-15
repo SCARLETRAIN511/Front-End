@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="event2.js"></script>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>modify the dom</h1>
+        <button onclick="document.getElementById('stuff').innerHTML='Clicked First Button';">First Button</button>
+        <button onclick="document.getElementById('stuff').innerHTML='Clicked Second Button';">Second Button</button>
+        <p>THis code shouldn't change</p>
+        <p id="stuff">This will change</p>
+        <p>This code shouldn't change</p>
+    </body>
+</html>
