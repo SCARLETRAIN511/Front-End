@@ -13,3 +13,5 @@ function findNemo(array){
     console.log('call to find nemo took' + (t1-t0) + 'ms');
 }
 findNemo(large);
+
+console.log(typeof NaN)
