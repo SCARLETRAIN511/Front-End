@@ -14,17 +14,28 @@ function for1(){
     for (let i = 1;i<=10;i++){
         console.log(i);
     }
-
     var str1 = "String";
+    var t = [];
     for (let i = 0;i<str1.length;i++){
-        var t = [];
-        t[i] = str1[i];
+        
+        t.push(str1[i])
+        /*push pop %% unshift shift */
     }
-    console.log(t[1])
+    return t.slice(0,5);
 }
 
-function main(){
-    for1()
+function for2(x){
+    var sum = 0
+    for (let i = 0;i<=10;i++){
+        sum += x*i;
+    }
+    return sum;
+
 }
 
-main()
+function replace(str){
+    let newStr = str.replace(/-/g,' ');
+    return newStr;
+}
+
+console.log(for1())
