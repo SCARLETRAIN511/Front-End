@@ -38,4 +38,11 @@ function replace(str){
     return newStr;
 }
 
+function Array1(){
+    var a1 = ["A","B","C"];
+    var a2 = a1.join("_");
+    console.log(typeof a2);
+}
+
 console.log(for1())
+Array1()
