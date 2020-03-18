@@ -16,6 +16,10 @@ function add(){
             var Newtodo = prompt("Entern the action");
             todos.push(Newtodo); 
         }
+        else if (input === "delete"){
+            var index = prompt("Enter the index of thing to remove");
+            todos.splice(index,1);
+        };
 
         var input = prompt("what would you want to do");//ask for the input again.
     }
