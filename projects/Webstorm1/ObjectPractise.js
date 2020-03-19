@@ -1,9 +1,9 @@
 'use strict'
 
 function part1() {
-    var ob1 ={
+    let ob1 ={
         name:"T",
-        attack:"Phycical",
+        attack:"Physical",
         hp:100,
         Helen:{
             name:"helen",
