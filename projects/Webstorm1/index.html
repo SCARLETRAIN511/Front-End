@@ -3,26 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+    p.p1{
+        color:darkorange;
+        background-color: grey;
+        text-align: center;
+        line-height: 100%;
+        width:50%;
+        cursor: crosshair;
+    }
+    p#para1{
+        background-color: red;
+        text-align: center;
+    }
+    div.d1 {
+        background-color: grey;
+        color: darkorange;
+        text-align: center;
+    }
+    div.choose1{
+        color: darkorange;
+        text-align: center;
+        line-height:10%;
+    }
+    div.type1{
+        color: blue;
+        text-align: center;
+    }
+
+    table.table1{
+        border-collapse: collapse;
+    }
+    </style>
+
+
 </head>
+
 <body>
 <h1>League of Legends</h1>
-<p>
+
+<p class="p1">
     <strong>英雄联盟</strong>lol 是拳头公司的游戏
 </p>
 
-<P>
+<P class="p1">
     <strong>英雄联盟有n个英雄</strong> 每个<ins>有5个技能</ins>
 </P>
-<p>
+
+<table class="table1" border="1">
+    <tr>
+        <td>12121221</td>
+        <td>121214343</td>
+    </tr>
+
+    <tr>
+        <td>Second row</td>
+        <td>ssssss</td>
+
+    </tr>
+</table>
+
+<p id="para1">
     It has 500 <del>thousand</del> <em>million</em> people.
 </p>
 
+    <div>
     We can see the code below;
     <br/>
     <pre>
     console.log("Hello");
     </pre>
-    <div>
+    </div>
+
+    <div class="d1">
     User name<input type="text" placeholder="@outlook.com">
         <br/>
     Password<input type="password">
@@ -30,29 +83,30 @@
         <input type="submit" value="Login">
     </div>
 
-</p>
-<div>//单选
+<div class="choose1"><!--单选-->
     <p>What will u do tonight</p>
     Study<input type="radio" name="h" checked="checked" value="study"><br/>
     Play<input type="radio" name="h" value="study"><br/>
     Coding<input type="radio" name="h" value="study"><br/>
 </div>
 
-<div><!--复选-->
+<div class="choose1"><!--复选-->
     <p>what will you do tonight</p>
     Study<input type="checkbox" name="h2" checked="checked" value="study"><br/>
     Play<input type="checkbox" name="h2" value="play"><br/>
     Coding<input type="checkbox" name="h2" value="code"><br/>
 
 </div>
-<div>
+
+<div class="choose1">
     <select size="3" multiple="multiple">
         <option>First</option>
         <option>Second</option>
         <option>Second</option>
     </select>
 </div>
-<div>
+
+<div class="type1">
     <textarea cols="40" rows="30">
         TextHere
     </textarea>
@@ -63,5 +117,6 @@
     <input type="submit" value="login">
     <input type="reset" value="reset">
 </div>
+
 </body>
 </html>
