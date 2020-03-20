@@ -1,0 +1,68 @@
+h1.h1{
+    text-align: center;
+    border: 2px dotted grey;
+}
+p.p1{
+    color:darkorange;
+    background-color: grey;
+    border: 1px dotted blue;
+    text-align: center;
+    line-height: 100%;
+    width:50%;
+    cursor: crosshair;
+    padding: 10px;
+    margin: 20px;
+}
+p#para1{
+    background-color: red;
+    text-align: center;
+}
+div.d1 {
+    background-color: grey;
+    color: darkorange;
+    text-align: center;
+}
+div.choose1{
+    color: darkorange;
+    text-align: center;
+    line-height:10%;
+}
+div.type1{
+    color: blue;
+    text-align: center;
+}
+
+table.table1 {
+    border-collapse: collapse;
+    border: 2px dotted grey;
+}
+a:link{
+    color: yellow;
+    text-decoration: none;
+}
+a:visited{
+    color: red;
+}
+a:hover {
+    color: black;
+}
+
+div.menu{
+    width: 80px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+div.menu a{
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    color: grey;
+    padding:10 10 10 10;
+}
+
+
+div.menu a:hover{
+    background-color: yellow;
+}
