@@ -1,5 +1,7 @@
 'use strict'
 
+
+//Ways of defining an object
 class FirstClass{
     constructor(name,age,city) {
         this.name = name;
@@ -33,6 +35,8 @@ let Employee = {
     }
 };
 
+
+//any instance created by function has a hidden property
 function Employer(_name,_age,_salary){
     this.name = _name;
     this.age = _age;
@@ -46,6 +50,8 @@ function Employer(_name,_age,_salary){
     }
 }
 
+
+//ways to use these objects
 function callObject1() {
     let People1 = new FirstClass("Tony", 20, "London");
 
