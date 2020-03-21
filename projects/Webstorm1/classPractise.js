@@ -2,11 +2,13 @@
 
 
 //Ways of defining an object
+//define a class
 class FirstClass{
-    constructor(name,age,city) {
+    constructor(name,age,city,sex) {
         this.name = name;
         this.age = age;
         this.city = city;
+        let _sex = sex;
     }
 
     getAge(){
@@ -37,14 +39,19 @@ let Employee = {
 
 
 //any instance created by function has a hidden property
-function Employer(_name,_age,_salary){
+function Employer(_name,_age,_salary, School){
     this.name = _name;
     this.age = _age;
     this.salary = _salary;
     this.sex = "male";
+    let _school = School;
+
+    this.returnSchool = function () {
+        return _school;
+    };
     this.showName = function () {
         console.log(this.name);
-    }
+    };
     this.setWage = function (salary) {
         this.salary = salary;
     }
@@ -66,13 +73,26 @@ function  callObject2() {
 }
 
 function callObject3() {
-    let Wang = new Employer("Wang",22,2000);
+    //call the object
+    let Wang = new Employer("Wang",22,2000, "Imperial");
+
     console.log("The salary of the employer is " + Wang.salary);
     Wang.showName();
     Wang.setWage(2000000);
     console.log(Wang.salary)
+
+    //prototype will create a common property for the object.
+    Employer.prototype.Company = "Google";
+    Employer.prototype.hello = function(){
+
+    };
+    console.log(Wang.Company);
+    Wang.hello();
+
+    //accessing the hidden property
+    console.log(Wang.returnSchool());1
 }
 
 
-callObject2();
-callObject3()
+
+callObj
