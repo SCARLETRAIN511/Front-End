@@ -19,7 +19,57 @@ class FirstClass{
         this.age = NewAge;
         return this.age;
     }
+
+    //static method
+    static displayStudent(student1, student2){
+        console.log("We have " + student1.name + " and " + student2.name);
+    }
 }
+
+
+//new object
+class Product{
+    constructor(name,price,amount,madeIn){
+        //limit the access of the property.
+        let _name = name;
+        let _amount = amount;
+        let _price = price;
+        let _madeIn = madeIn;
+
+        this.getName = function(){
+            return _name;
+        };
+        this.getPrice = function(){
+            return _price;
+        };
+        this.getAmount = function(){
+            return _amount;
+        };
+        this.setAmount = function(num){
+            _amount = num;
+        };
+        this.getMadeIn = function(){
+            return _madeIn;
+        }
+    }
+    canSell(num){
+        return this.getAmount() >= num;
+    }
+
+    sell(num){
+        let temp = this.getAmount();
+        if(this.canSell(num)){
+            this.setAmount(temp-num);
+            return this.getAmount();
+        }else{
+            this.setAmount(temp + (num*2));
+            return this.getAmount();
+        }
+    }
+
+}
+
+
 
 let Employee = {
     name:"Joe",
@@ -65,6 +115,10 @@ function callObject1() {
     console.log(People1.name);
     People1.SetAge(19);
     console.log(People1.getAge());
+
+    let People2 = new FirstClass("Sally",19, "London");
+
+    FirstClass.displayStudent(People1,People2);
 }
 
 function  callObject2() {
@@ -94,5 +148,10 @@ function callObject3() {
 }
 
 
+function callObject4() {
+    let Fruit1 = new Product("Apple",100,120,"China");
+    console.log(Fruit1.getAmount());
+    console.log(Fruit1.sell(199));
+}
 
-callObj
+callObject4();
