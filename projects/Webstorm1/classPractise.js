@@ -20,7 +20,7 @@ class FirstClass{
         return this.age;
     }
 
-    //static method
+    //static method only belongs to the class;
     static displayStudent(student1, student2){
         console.log("We have " + student1.name + " and " + student2.name);
     }
@@ -31,11 +31,13 @@ class FirstClass{
 class Product{
     constructor(name,price,amount,madeIn){
         //limit the access of the property.
+        //this should not be used here.
         let _name = name;
         let _amount = amount;
         let _price = price;
         let _madeIn = madeIn;
 
+        //hidden property can be called through this way.
         this.getName = function(){
             return _name;
         };
@@ -118,13 +120,16 @@ function callObject1() {
 
     let People2 = new FirstClass("Sally",19, "London");
 
+    //call the static method.
     FirstClass.displayStudent(People1,People2);
 }
+
 
 function  callObject2() {
     Employee.setSalary(20000);
     Employee.showSalary();
 }
+
 
 function callObject3() {
     //call the object
@@ -153,5 +158,6 @@ function callObject4() {
     console.log(Fruit1.getAmount());
     console.log(Fruit1.sell(199));
 }
+
 
 callObject4();
