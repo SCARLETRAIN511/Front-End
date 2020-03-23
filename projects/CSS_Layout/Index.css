@@ -1,0 +1,13 @@
+
+div.inner{
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+/*调整外部div 向左移 不占坑位*/
+div.outer{
+    position: absolute;
+    left: 150px;
+    top: 0px;
+}
