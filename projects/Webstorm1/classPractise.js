@@ -72,7 +72,6 @@ class Product{
 }
 
 
-
 let Employee = {
     name:"Joe",
     age:24,
