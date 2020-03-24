@@ -1,0 +1,42 @@
+div.bold{
+    color: #cc99ff;
+}
+
+body{
+    font-family: 宋体;
+    font-size: 13px;
+    color: #666666;
+    /*set the page width*/
+    width: 643px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+div.topMenu{
+    border-bottom: solid silver 1px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.floatRight{
+    float: right;
+}
+.floatLeft{
+    float: left;
+}
+div.clearLeft{
+    clear:left;
+}
+
+div#thirdDiv span{
+    color: darkgray;
+}
+div#thirdDiv{
+    margin-top: 140px;
+}
+
+a{
+    text-decoration: none;
+}
