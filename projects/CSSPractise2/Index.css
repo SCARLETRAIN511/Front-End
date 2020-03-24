@@ -1,0 +1,53 @@
+.table1{
+
+}
+.tr{
+    background-color: #11141B;
+    border-top-color: #11141B;
+}
+
+div.gold{
+    color: #FF9100;
+    text-align: center;
+    font-size: 10px;
+}
+
+div.gold1{
+    color: #FF9100;
+    text-align: left;
+    font-size: 10px;
+    font-style: bold;
+}
+
+div.fond{
+    background-color: #333333;
+    width: 800px;
+    height: 600px;
+}
+div.darkFloarLeft{
+    float: left;
+}
+
+span.option{
+    margin-right: 15px;
+    font-size:10px;
+}
+
+div.boldWhite{
+    font: "宋体" bold;
+    color: #F4F4F4;
+    text-align: center;
+    font-size: 15px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+div.white{
+    font:"宋体";
+    color: #F4F4F4;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div.darkFloarLeft{
+    background-color: #11141B;
+}
