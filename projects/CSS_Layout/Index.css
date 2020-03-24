@@ -11,3 +11,7 @@ div.outer{
     left: 150px;
     top: 0px;
 }
+span{
+    display: inline-block;
+    border: solid gray 1px;
+}
