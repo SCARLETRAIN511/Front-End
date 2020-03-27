@@ -6,7 +6,55 @@
 </head>
 <body>
 <link rel="stylesheet" type="text/css" href="Index.css">
+<div class="move">
+    <span class="WarnRed">请注意:带有*的项目必须填写</span>
 
+    <div class="background">
+
+
+        <span class="title">请填写您的用户名：</span>
+
+        <table class="A">
+            <tr>
+                <td class="firstCol"><font color="red">*</font>用户名</td>
+                <td class="secCol"><input type="text" value="请输入用户名" onfocus="if(value=='请输入用户名') {value=''}" onblur="if (value == '') {value='请输入用户名'}"  style="background-color: ghostwhite;color: lightgray"><br/>
+                <a class="link1" href="#">查看用户名是否占用</a></td>
+                <td class="BackgroundThr">用户名由a~z的英文字母，0~9的数字，<b>点，减号</b>或<b>下划线</b>组成，长度为3-18个字符，只能以数字或者字母开头和结尾，例如：kz1001</td>
+            </tr>
+        </table>
+
+
+        <span class="title">请填写安全设置:<span style="font-size: small;font-weight: normal">(安全设置用于验证账号和找回密码)</span></span>
+        <span class="WarnRed">以下信息十分重要</span>
+
+        <table>
+            <tr>
+                <td class="firstCol"><span class="red">*</span>请输入密码 <br/><span class="red">*</span> 登录密码确认</td>
+                <td class="secCol"><input type="text" style="background-color: ghostwhite"><br style="margin: 5px"/><input type="text" style="background-color: ghostwhite"></td>
+                <td class="BackgroundThr">密码长度为6~16位，区分字母大小写【<a class="lj_ziti" href="#">更多</a>】</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td class="firstCol"><span class="red">*</span>密码提示问题：<br/><span class="red">*</span>密码提示答案：</td>
+                <td class="secCol"><input type="text" style="background-color: ghostwhite"><br style="margin: 5px"/><input type="text" style="background-color: ghostwhite"></td>
+                <td class="BackgroundThr">忘记密码可以找回，问题长度<b>不大于36个字符</b>。答案长度在30位之内</td>
+            </tr>
+        </table>
+
+
+        <table>
+            <tr>
+                <td class="firstCol"><span class="red">*</span>输入安全码<br/><span class="red">*</span>安全码确认</td>
+                <td class="secCol"><input type="text" style="background-color: ghostwhite"><br style="margin: 5px"/><input type="text" style="background-color: ghostwhite"></td>
+                <td class="BackgroundThr">安全码时您找回密码的重要途径，安全码长度为6~16位，区分字母大小写，由字母，数字特殊字符组成.<span class="red">特别提醒：安全码一旦设定，将不可自行修改.</span>【<a class="lj_ziti" href="#">更多说明</a>】</td>
+            </tr>
+        </table>
+
+        <center><input style="margin: 5px;" type="button" value="提交表单"></center>
+    </div>
+</div>
 
 
 </body>

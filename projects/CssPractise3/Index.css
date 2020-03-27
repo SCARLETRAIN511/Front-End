@@ -1,0 +1,72 @@
+div.move{
+    margin: auto;
+    width: 800px;
+    height: 600px;
+    padding: 20px;
+}
+
+div.background{
+    width: 600px;
+    height: 480px;
+    border: 2px solid lightblue;
+}
+
+span.title{
+    display: block;
+    background-color: lightblue;
+    margin: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    color: steelblue;
+}
+.red{
+    color: red;
+}
+
+.WarnRed{
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: red;
+}
+
+table{
+    width: 100%;
+    border-bottom: 2px solid lightcyan;
+    margin: 1px;
+    padding: 1px;
+}
+
+td{
+    height: 70px;
+    padding: 6px;
+    margin: 2px;
+}
+
+.firstCol{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.BackgroundThr{
+    font-size: 12px;
+    letter-spacing: 1px;
+    background-color: whitesmoke;
+    width: 50%;
+}
+
+a.link1{
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+input{
+    width: 120px;
+}
+
+td.firstCol{
+    width: 20%;
+}
+td.secCol{
+    width: 20%;
+}
+
