@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        table{
+            border-collapse: collapse;
+
+        }
+        td{
+            border:1px solid silver;
+            padding: 3px;
+            font-size: 12px;
+        }
+        input{
+            width: 80px;
+        }
+    </style>
+
+    <script>
+        function p(base,power) {
+            if (power === 1){
+                return base;
+            }
+            if (power === 0){
+                return 1;
+            }
+            let result = base;
+            for (let i = 0;i<power-1;i++){
+                result *= base;
+            }
+            return  result;
+        }
+
+        function compound(rate,year){
+            let result = 0;
+            for (let i=year;i>0;i--){
+                result += p(rate,i);
+            }
+            return result;
+        }
+
+        function getNumberValue(id) {
+            return parseFloat(document.getElementById(id).value);
+        }
+
+        function setValue(id,value) {
+            document.getElementById(id).value = value;
+        }
+
+        function calc() {
+            let initMoney = getNumberValue("initMoney");
+            let rate = getNumberValue("rate");
+            let year = getNumberValue("year");
+            let annualIn = getNumberValue("annualIn");
+            let sum1 = (year-1)*annualIn + initMoney;
+            let sum3 = annualIn * compound(1+rate/100,(year-1)) + initMoney*p((1+rate/100),year);
+
+            let sum2 = sum3-sum1;
+
+            setValue("sum1",sum1);
+            setValue("sum2",sum2);
+            setValue("sum3",sum3)
+
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>起始资金</td>
+        <td><input type="text" id="initMoney" value="0"> RMB</td>
+    </tr>
+
+    <tr>
+        <td>每年收益</td>
+        <td><input type="text" id="rate" value="0"> %</td>
+    </tr>
+
+    <tr>
+        <td>复利年数</td>
+        <td><input type="text" id="year" value="1"> 年</td>
+    </tr>
+
+    <tr>
+        <td>每年追加资金数</td>
+        <td><input type="text" id="annualIn" value="0"> RMB</td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center"><input type="button" value="cal" onclick="calc()"></td>
+    </tr>
+
+    <tr>
+        <td>本金和</td>
+        <td><input type="text" id="sum1" disabled="disabled" value="0"> RMB</td>
+    </tr>
+
+    <tr>
+        <td>利息和</td>
+        <td><input type="text" id="sum2" disabled="disabled" value="0"> RMB</td>
+    </tr>
+
+    <tr>
+        <td>本息和</td>
+        <td><input type="text" value="0" disabled="disabled" id="sum3"> RMB</td>
+    </tr>
+</table>
+
+
+</body>
+</html>
