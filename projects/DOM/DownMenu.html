@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            font-size: 14px;
+            color: cornflowerblue;
+            text-decoration: none;
+        }
+        div.menuWeapon{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        div.menuArmor{
+            position: absolute;
+            left: 45px;
+            top: 20px;
+        }
+        div.menuHero{
+            position: absolute;
+            left: 80px;
+            top: 20px;
+        }
+
+        div.menu{
+            width: 80px;
+            border: 1px solid lightgray;
+            margin-top: 15px;
+            display: none;
+        }
+        div.menu a{
+            display: block;
+            font-size: 14px;
+            font-family: '宋体';
+            color: #888;
+            text-decoration: none;
+            padding: 10 0 10 15;
+        }
+        div.menu a:hover{
+            background-color: #f1f1f1;
+        }
+    </style>
+
+    <script>
+        function show(type){
+            let menuDivs = document.getElementsByClassName("menu");
+            for (let i = 0;i<menuDivs.length;i++) {
+                let d = menuDivs[i];
+                d.style.display = "none";
+            }
+            let divClassName = "menu"+type;
+            let div = document.getElementsByClassName(divClassName)[0];
+            div.style.display = "block";
+        }
+
+    </script>
+</head>
+<body>
+
+<a href="nowhere" onmouseover="show('Weapon')">武器</a>
+<a href="nowhere" onmouseover="show('Armor')">护甲</a>
+<a href="nowhere" onmouseover="show('Hero')">英雄</a>
+
+<div class="menu menuWeapon">
+    <a href="nowhere">大剑</a>
+    <a href="nowhere">屠龙</a>
+    <a href="nowhere">倚天</a>
+    <a href="nowhere">七孔砖</a>
+</div>
+
+<div class="menu menuArmor">
+    <a href="nowhere">胸甲</a>
+    <a href="nowhere">护腕</a>
+    <a href="nowhere">头盔</a>
+</div>
+
+<div class="menu menuHero">
+    <a href="nowhere">盖伦</a>
+    <a href="nowhere">提莫</a>
+    <a href="nowhere">安妮</a>
+    <a href="nowhere">四哥</a>
+</div>
+
+</body>
+</html>

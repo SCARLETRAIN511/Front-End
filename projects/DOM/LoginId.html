@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function check() {
+            let name = document.getElementById("name").value;
+            let noMessage = document.getElementById("noMessage");
+            let message = document.getElementById("message");
+            noMessage.style.display = "none";
+            message.style.display = "none";
+            if (name.length !== 0){
+                let firstChar = name[0];
+                if (firstChar === 'a' || firstChar === 'A'){
+                    noMessage.style.display = "inline";
+                }
+                else {
+                    message.style.display = "inline"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="name" placeholder="type the user name" onkeyup="check()">
+<span id="noMessage" style="color:red;display: none">It can not be used</span>
+<span id="message" style="color: green;display: none">It can be used</span>
+</body>
+</html>
