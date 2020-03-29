@@ -3,8 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <script>
+        let col = 0;
+        let reverse = false;
+        function sort(column){
+            if (column === col){
+                reverse = !reverse;
+            }
+            col = column;
+            let tbody = document.getElementById("tbody");
+
+            let trsCollection = document.getElementsByTagName("tr");
+
+            let trs = [];
+            for (let i = 1;i < trsCollection.length;i++){
+                trs.push(trsCollection[i]);
+            }
+            trs.sort(comparator);
+
+            for (let i = 0;i<trs.length;i++){
+                tbody.appendChild(trs[i]);
+            }
+        }
+
+        function comparator(tr1,tr2) {
+            let td1 = tr1.children[col].innerHTML;
+            let td2 = tr2.children[col].innerHTML;
+            if (reverse){
+                return td1.localeCompare(td2);
+            }
+            else {
+                return td2.localeCompare(td1);
+            }
+
+        }
+    </script>
 </head>
 <body>
+<table>
+    <tbody id="tbody">
+    <tr>
+        <td><a  href="javascript:void(0)" onclick="sort(0)">id</a></td>
+        <td><a  href="javascript:void(0)"  onclick="sort(1)">名称</a></td>
+        <td><a  href="javascript:void(0)"  onclick="sort(2)">血量</a></td>
+        <td><a  href="javascript:void(0)"  onclick="sort(3)">伤害</a></td>
+    </tr>
+
+    <tr >
+        <td>1</td>
+        <td>gareen</td>
+        <td>340</td>
+        <td>58</td>
+    </tr>
+    <tr >
+        <td>2</td>
+        <td>teemo</td>
+        <td>320</td>
+        <td>76</td>
+    </tr>
+    <tr >
+        <td>3</td>
+        <td>annie</td>
+        <td>380</td>
+        <td>38</td>
+    </tr>
+    <tr >
+        <td>4</td>
+        <td>deadbrother</td>
+        <td>400</td>
+        <td>90</td>
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>
