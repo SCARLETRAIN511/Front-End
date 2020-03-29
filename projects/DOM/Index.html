@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<div id="d1" align="center" class="abc">hello HTML DOM</div>
+<script>
+    let  div1 = document.getElementById("d1");
+    let as = div1.attributes;
+    document.write("div总共有"+as.length +" 个属性");
+    document.write("分别是:");
+    for(i = 0; i< as.length; i++){
+        document.write("<br>");
+        document.write(as[i].nodeName);
+        document.write(":");
+        document.write(as[i].nodeValue);
+    }
+    document.write("<br>");
+    document.write("div的id属性值是："+ as["id"].nodeValue);
+</script>
+</body>
+</html>

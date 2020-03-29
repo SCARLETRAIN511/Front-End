@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function hide() {
+        let d = document.getElementById("d1");
+        d.style.display = "none";
+    }
+
+    function show() {
+        let d = document.getElementById("d1");
+        d.style.display = "block";
+    }
+</script>
+
+<div id="d1">This is a div</div>
+<span><button onclick="hide()">hide</button> <button onclick="show()">show</button> </span>
+
+</body>
+</html>
