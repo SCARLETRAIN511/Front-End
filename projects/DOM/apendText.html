@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function add() {
+            let p = document.createElement("p");
+            let text = document.createTextNode("This is ceated by DOM");
+            p.append(text);
+
+            let div1 = document.getElementById("d");
+            div1.append(p);
+
+        }
+    </script>
+</head>
+<body>
+<div id="d">Hello Html DOM</div>
+
+<button onclick="add()">add an element</button>
+
+</body>
+</html>

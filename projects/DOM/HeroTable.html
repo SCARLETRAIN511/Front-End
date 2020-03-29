@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HeroTable</title>
+
+    <script>
+        function deleteRow(link) {
+            let message = confirm("Delete?");
+            if (!message){
+                return;
+            }
+
+            let table = document.getElementById("heroTable");
+            let td = link.parentNode;
+            let tr = td.parentNode;
+            let index = tr.rowIndex;
+            table.deleteRow(index);
+
+        }
+    </script>
+</head>
+<body>
+<table width="100%" border="1" cellspacing="0" id="heroTable">
+    <tr>
+        <td width="50%">Hero Name</td>
+        <td>operation</td>
+    </tr>
+
+    <tr>
+        <td>Garen</td>
+        <td><a href="#" onclick="deleteRow(this)">delete</a></td>
+    </tr>
+
+    <tr>
+        <td>Timo</td>
+        <td><a href="#" onclick="deleteRow(this)">delete</a></td>
+    </tr>
+
+    <tr>
+        <td>Prayer</td>
+        <td><a href="#" onclick="deleteRow(this)">delete</a></td>
+    </tr>
+
+</table>
+
+</body>
+</html>
