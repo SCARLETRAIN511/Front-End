@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            let div = $("#d");
+            $("#b1").click(function () {
+                div.hide();
+            });
+            $("#b2").click(function () {
+                div.show();
+            });
+            $("#b3").click(function () {
+                div.toggle();
+            });
+            $("#b4").click(function () {
+                div.show(1000);
+            });
+            $("#b5").click(function () {
+                div.hide(1000);
+            });
+            $("#b6").click(function () {
+                div.toggle(1000);
+            });
+        })
+    </script>
+    <style>
+        button{
+            display: block;
+        }
+
+        div{
+            border: 1px solid grey;
+            background-color: pink;
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="b1">立即隐藏</button>
+<button id="b2">立即显示</button>
+<button id="b3">立即切换</button>
+
+<button id="b4">延时显示</button>
+<button id="b5">延时隐藏</button>
+<button id="b6">延时切换</button>
+
+<br>
+<br>
+
+<div id="d">
+    用于演示效果的DIV
+</div>
+</body>
+</html>
