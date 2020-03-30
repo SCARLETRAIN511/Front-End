@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".b").click(function(){
+                let value = $(this).val();
+                $("td[rowspan!=13] "+value).toggle(500);
+            });
+
+        });
+    </script>
+
+    <style>
+        table{
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 80%;
+        }
+        table td{
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            padding-block: 5px;
+        }
+
+        div button{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td rowspan="13" align="top" width="150px">
+            <div>
+                <button value=":input" class="b">切换所有的：input</button>
+                <button value=":button" class="b">切换：button</button>
+                <button value=":radio" class="b">切换:radio</button>
+                <button value=":checkbox" class="b">切换：text</button>
+                <button value=":text" class="b">切换：Text</button>
+                <button value=":password" class="b">切换：password</button>
+                <button value=":file" class="b">切换：file</button>
+                <button value=":submit" class="b">切换：submit</button>
+                <button value=":image" class="b">切换：image</button>
+                <button value=":reset" class="b">切换：reset</button>
+            </div>
+        </td>
+
+        <td width="120px">说明</td>
+        <td width="120px">表单对象</td>
+        <td width="">示例</td>
+    </tr>
+
+    <tr>
+        <td>input 按钮</td>
+        <td>:button</td>
+        <td><input type="button" value="input按钮"></td>
+    </tr>
+
+    <tr>
+        <td>button按钮</td>
+        <td >:button</td>
+        <td><button>Button按钮</button></td>
+    </tr>
+    <tr>
+        <td>单选框</td>
+        <td >:radio</td>
+        <td><input type="radio" ></td>
+    </tr>
+    <tr>
+        <td>复选框</td>
+        <td >:checkbox</td>
+        <td><input type="checkbox"  ></td>
+    </tr>
+
+    <tr>
+        <td>文本框</td>
+        <td >:text</td>
+        <td><input type="text" /></td>
+    </tr>
+    <tr>
+        <td>文本域</td>
+        <td ></td>
+        <td><textarea></textarea></td>
+    </tr>
+    <tr>
+        <td>密码框</td>
+        <td >:password</td>
+        <td><input type="password" /></td>
+    </tr>
+    <tr>
+        <td>下拉框</td>
+        <td ></td>
+        <td><select><option>Option</option></select></td>
+    </tr>
+
+    <tr>
+        <td>文件上传</td>
+        <td >:file</td>
+        <td> <input type="file" /></td>
+    </tr>
+
+    <tr>
+        <td>提交按钮</td>
+        <td >:submit</td>
+        <td><input type="submit" /></td>
+    </tr>
+    <tr>
+        <td>图片型提交按钮</td>
+        <td >:image</td>
+        <td><input type="image" src="https://how2j.cn/example.gif" /></td>
+    </tr>
+
+    <tr>
+        <td>重置按钮</td>
+        <td >:reset</td>
+        <td><input type="reset" /></td>
+    </tr>
+
+
+</table>
+</body>
+</html>

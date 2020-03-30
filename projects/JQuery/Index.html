@@ -6,13 +6,50 @@
     <script src="jquery.min.js"></script>
 
     <script>
-        $(function(){
-            document.write("Open successful");
-            document.close();
-        })
+        $(function () {
+            $("#b1").click(function () {
+                alert("hello");
+            });
+
+            $("#bHide").click(function () {
+                $("#div1").hide();
+            });
+
+            $("#bShow").click(function () {
+                $("#div1").show();
+            })
+
+            $("#get1").click(function () {
+                alert($("#return").val());
+
+            })
+
+            $("#changeBack").click(function () {
+                $("#bkgd1").css({"background-color":"black","color":"pink"});
+            })
+        });
+
     </script>
 </head>
-<body>
+<br>
 
+<button id="b1">Submit</button>
+<div id="div1">Hellloooo</div>
+<button id="bHide">Hide</button>
+<button id="bShow">Show</button>
+
+</br>
+
+<div>
+    <input type="text" value="HHHH" id="return">
+    </br>
+    <button id="get1">Get</button>
+</div>
+
+<div id="bkgd1">
+Helloo, we can change the background
+</div>
+
+<button id="changeBack">Change the background</button>
 </body>
 </html>
