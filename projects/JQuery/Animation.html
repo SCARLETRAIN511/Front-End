@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#b1").click(function () {
+                let div = $("#div1");
+                div.animate({left:'100px'},2000);
+                div.animate({left:"0",top:"50px",height:"60px",width:"160px"},500,function () {
+                    alert("Animation finished");//call back function
+                });
+            });
+
+            $("#b2").click(function () {
+                $("#message").html("Single click");
+            });
+
+            $("#b2").dblclick(function () {
+                $("#message").html("Double click");
+            })
+        })
+    </script>
+
+    <style>
+        button{
+            display: block;
+        }
+
+        div#div1{
+            background-color: pink;
+            height: 80px;
+            width: 200px;
+            font-size: 12px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<button id="b1">Make the animation</button>
+<button id="b2">测试单击和双击</button>
+
+<div id="message">message</div>
+<div id="div1">
+    <p>Left 100px</p>
+    <p>Down 50px and smaller</p>
+</div>
+
+</body>
+</html>
