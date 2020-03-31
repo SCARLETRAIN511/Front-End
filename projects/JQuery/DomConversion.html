@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            let div1 = $("#div1");
+            $("#b1").click(function () {
+                let div = document.getElementById("d1");
+                let dJ = $(div);
+                alert("Jquery对象是 " + dJ );
+                alert("Dom对象是" + div)
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="b1">Convert Show</button>
+<div id="d1">Hello Jquery</div>
+</body>
+</html>
