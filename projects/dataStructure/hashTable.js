@@ -54,9 +54,37 @@ class HashTable{
     }
 }
 
-
 const MyHash = new HashTable(50);
-MyHash.set("gap",100);
-MyHash.set("Ho",100000);
-console.log(MyHash.data);
-console.log(MyHash.keys());
+
+
+
+//solution for first recurring character
+function recurringChar1(arr){
+    for (let i = 0;i<arr.length;i++){
+        for (let j = i+1;j<arr.length;j++){
+            if (arr[i] === arr[j]){
+                return arr[i];
+            }
+        }
+    }
+    return undefined;
+}//O[n^2]
+
+function recurringChar2(arr) {
+    let map = {};
+    for (let i = 0;i<arr.length;i++){
+        if (map[arr[i]] !== undefined){
+            return arr[i];
+        }
+        else{
+            //value in the array is the key in the set
+            //value in the set turns to be the index
+            map[arr[i]] = i;
+        }
+    }
+    return undefined;
+}//O[n]
+
+console.log(recurringChar2([1,2,2,3,4,53,53]));
+
+
