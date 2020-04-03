@@ -104,6 +104,7 @@ function merge(arr1,arr2) {
     return merged;
 }
 
+
 function merge2(arr1,arr2){
     let merged = [];
     while (arr1[0] && arr2[0]){
