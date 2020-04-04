@@ -1,0 +1,123 @@
+'use strict'
+//LinkedList
+//Naive Solution
+/*
+let myLinkedList = {
+    head:{
+        value:2,
+        next:{
+            value:5,
+            next: {
+                value:16,
+                next:null
+            }
+        }
+    }
+};*/
+
+
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+
+class LinkedList{
+    constructor(value) {
+        this.head = new Node(value);
+        this.tail = this.head;
+        this.length = 1;
+    }
+
+    append(value){
+        const newNode = new Node(value);
+        this.tail.next = newNode;
+        this.tail = newNode;
+        this.length ++;
+        return this;
+    }
+
+    prepend(value){
+        const newNode = new Node(value);
+        newNode.next = this.head;
+        this.head = newNode;
+        this.length ++ ;
+        return this;
+    }
+
+    printList(){
+        const  arr = [];
+        let currNode = this.head;
+        while (currNode !== null){
+            arr.push(currNode.value);
+            currNode = currNode.next;
+        }
+        return arr;
+    }
+
+    //use traverse to find the index and the node
+    traverseToIndex(index){
+        if (index > this.length){
+            return undefined
+        }
+        let counter = 0;
+        let currNode = this.head;
+        while(counter !== index){
+            currNode = currNode.next;
+            counter++;
+        }
+        return currNode;
+    }
+
+    insert(index,value){
+        if (index >= this.length){
+            return this.append(value);
+        }
+        if (index === 0){
+            this.prepend(value);
+            return this.printList;
+        }
+        const newNode = new Node(value);
+        const leader = this.traverseToIndex(index-1);
+
+        newNode.next = leader.next;
+        leader.next = newNode;
+        /*const holdingPoint = leader.next
+        * leader.next = newNode;
+        * newNode.next = holdingPoint;
+        * */
+        this.length++;
+        return this.printList();
+    }
+
+    remove(index){
+        if (index === 0){
+            this.head = this.head.next;
+            this.length--;
+            return this.printList;
+        }
+        const leader = this.traverseToIndex(index-1);
+        const unWanted = leader.next;
+        leader.next = unWanted.next;
+        this.length --;
+        return this.printList();
+    }
+}
+
+
+function testLinkedList() {
+    let l1 = new LinkedList(1);
+    l1.append(2);
+    l1.append(333);
+    l1.append(2212);
+    l1.insert(2, 22);
+    l1.insert(53, 12);
+    l1.insert(5, 55555);
+    console.log(l1);
+    l1.remove(0);
+    console.log(l1);
+    console.log(l1.printList());
+}
+
+testLinkedList();
