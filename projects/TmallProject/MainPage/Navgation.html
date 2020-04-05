@@ -63,21 +63,20 @@
     </style>
 
     <script>
-        $(function () {
-            $("#div.rightMenu span").mouseenter(function () {
+        $(function(){
+            $("div.rightMenu span").mouseenter(function(){
                 let left = $(this).position().left;
                 let top = $(this).position().top;
-                let width = $(this).css('width');
+                let width = $(this).css("width");
                 let destLeft = parseInt(left) + parseInt(width)/2;
                 $("img#catear").css("left",destLeft);
-                $("img#catear").css("top",top-20);
+                $("img#catear").css("top",top+30);
                 $("img#catear").fadeIn(500);
             });
-
-            $("div.rightMenu span").mouseleave(function () {
+            $("div.rightMenu span").mouseleave(function(){
                 $("img#catear").hide();
-            })
-        })
+            });
+        });
     </script>
 </head>
 <body>
@@ -97,6 +96,9 @@
             <span><a href="#nowhere"><img src="https://how2j.cn/tmall/img/site/guoji.png"></a></span>
             <span><a href="#nowhere">电视</a></span>
             <span><a href="#nowhere">热水器</a></span>
+            <span><a href="#nowhere">玩具</a></span>
+            <span><a href="#nowhere">数码</a></span>
+            <span><a href="#nowhere">零食</a></span>
         </div>
 
     </div>
