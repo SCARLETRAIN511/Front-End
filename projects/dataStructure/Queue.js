@@ -1,5 +1,6 @@
 'use strict'
 
+//use linkedList to implement the Queue ADT;
 class Node {
     constructor(value) {
         this.value = value;
@@ -45,9 +46,14 @@ class Queue {
     }
 }
 
-let q1 = new Queue();
-q1.enqueue(1);
-q1.enqueue(2);
-console.log(q1);
-q1.dequeue();
-console.log(q1);
+
+function queueOp() {
+    let q1 = new Queue();
+    q1.enqueue(1);
+    q1.enqueue(2);
+    console.log(q1);
+    q1.dequeue();
+    console.log(q1);
+}
+
+queueOp();

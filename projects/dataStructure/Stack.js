@@ -46,29 +46,28 @@ class Stack {
     }
 }
 
+function StackOp() {
+    let s1 = new Stack();
+    s1.push("A");
+    s1.push("B");
+    console.log(s1);
+    console.log(s1.peek());
+    s1.pop();
+    console.log(s1);
+}
 
-let s1 = new Stack();
-s1.push("A");
-s1.push("B");
-console.log(s1);
-console.log(s1.peek());
-s1.pop();
-console.log(s1);
 
 //use Array to implement Stack
 class Stack_Array {
     constructor() {
         this.array = [];
     }
-
     peek(){
         return this.array[this.array.length-1];
     }
-
     push(value){
         this.array.push(value);
     }
-
     pop(){
         this.array.pop();
         return this;
