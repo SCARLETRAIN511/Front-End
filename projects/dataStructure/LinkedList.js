@@ -226,22 +226,19 @@ class DoubleLinkedList{
         return this.printList();
     }
 
-    remove(index){
-        if (index === 0){
+    remove(index) {
+        if (index === 0) {
             this.head = this.head.next;
             this.length--;
             return this.printList;
         }
-        const leader = this.traverseToIndex(index-1);
+        const leader = this.traverseToIndex(index - 1);
         const unWanted = leader.next;
         leader.next = unWanted.next;
         unWanted.next.prev = leader;
-        this.length --;
+        this.length--;
         return this.printList();
     }
-
-    //reverse the linkedlist
-
 }
 
 
