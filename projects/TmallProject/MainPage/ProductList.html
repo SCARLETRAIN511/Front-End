@@ -9,6 +9,57 @@
     <script src="../js/bootstrap/3.3.6/bootstrap.min.js"></script>
 
     <style>
+        div.categoryPageDiv{
+            max-width: 1013px;
+            margin: 10px auto;
+        }
+        div.categorySortingBar{
+            background-color: #F9F9F9;
+            margin: 40px 20px 20px 20px;
+            padding: 4px;
+        }
+        table.categorySortingBarTable{
+            border-collapse: collapse;
+            display: inline-block;
+        }
+        table.categorySortingBarTable span.glyphicon{
+            font-size: 10px;
+        }
+        table.categorySortingBarTable td{
+            height: 17px;
+            font-size: 12px;
+            border: 1px solid #cccccc;
+            padding: 3px;
+        }
+        table.categorySortingBarTable td.grayColumn{
+            background-color: #f1edec;
+        }
+        table.categorySortingBarTable td a{
+            color: #806F66;
+            text-decoration: none;
+        }
+        table.categorySortingBarTable td a:hover{
+            color:#c40000;
+        }
+        table.categorySortingBarTable input{
+            border-width: 0px;
+            height: 15px;
+            width: 50px;
+        }
+
+        table.categorySortingBarTable td.priceMiddleColumn{
+            width: 5px;
+            color: #cccccc;
+            vertical-align: middle;
+        }
+        table.categorySortingTable td:hover{
+            background-color: #f1edec;
+        }
+        body{
+            font-size: 12px;
+            font-family: Arial;
+        }
+
         body{
             font-size: 12px;
             font-family: Arial;
@@ -101,11 +152,63 @@
             padding-left: 3px;
         }
     </style>
+
+    <script>
+        $(function(){
+            $("input.sortBarPrice").keyup(function(){
+                let num= $(this).val();
+                if(num.length===0){
+                    $("div.productUnit").show();
+                    return;
+                }
+
+                num = parseInt(num);
+                if(isNaN(num))
+                    num= 1;
+                if(num<=0)
+                    num = 1;
+                $(this).val(num);
+
+                let begin = $("input.beginPrice").val();
+                let end = $("input.endPrice").val();
+                if(!isNaN(begin) && !isNaN(end)){
+                    $("div.productUnit").hide();
+                    $("div.productUnit").each(function(){
+                        let price = $(this).attr("price");
+                        price = Number(price);
+                        if(price<=end && price>=begin)
+                            $(this).show();
+                    });
+                }
+
+            });
+        });
+    </script>
 </head>
 <body>
-
+<!--Sorting price with the product page-->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <div class="categoryPageDiv">
+    <img src="https://how2j.cn/tmall/img/category/72.jpg">
+    <div class="categorySortingBar">
+        <table class="categorySortingBarTable categorySortingTable">
+            <tr>
+                <td class="grayColumn"><a href="#nowhere">综合<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+                <td><a href="#nowhere">人气<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+                <td><a href="#nowhere">新品<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+                <td><a href="#nowhere">销量<span class="glyphicon glyphicon-arrow-down"></span></a></td>
+            </tr>
+        </table>
+
+        <table class="categorySortingBarTable">
+            <tr>
+                <td><input type="text" placeholder="请输入" class="sortingBarPrice beginPrice"></td>
+                <td class="grayColumn priceMiddleColumn">-</td>
+                <td><input type="text" placeholder="请输入" class="sortingBarPrice endPrice"></td>
+            </tr>
+        </table>
+    </div>
+
     <div class="categoryProducts">
         <div price="799.2" class="productUnit">
             <div class="productUnitFrame">
