@@ -124,11 +124,17 @@ class BinarySearchTree {
 }
 
 
-let bst1 = new BinarySearchTree();
-bst1.insert(9);
-bst1.insert(2);
-bst1.insert(4);
-bst1.insert(0);
+function treeOp1() {
+    let bst1 = new BinarySearchTree();
+    bst1.insert(9);
+    bst1.insert(2);
+    bst1.insert(4);
+    bst1.insert(0);
 //test the lookup function
-console.log(bst1.lookup(12));
-console.log(bst1);
+    console.log(bst1.lookup(12));
+    console.log(bst1);
+    bst1.remove(0);
+    console.log(bst1);
+}
+
+treeOp1();
