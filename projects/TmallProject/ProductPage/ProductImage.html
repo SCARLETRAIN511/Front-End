@@ -8,23 +8,25 @@
     <link href="../css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
     <script src="../js/bootstrap/3.3.6/bootstrap.min.js"></script>
     <script>
-        $("img.smallImage").mouseenter(function () {
-            let bigImageUrl = $(this).attr("bigImageUrl");
-            $("img.bigImg").attr("src",bigImageUrl);
+        $(function(){
+        $("img.smallImage").mouseenter(function(){
+            var bigImageURL = $(this).attr("bigImageURL");
+            $("img.bigImg").attr("src",bigImageURL);
         });
-        $("img.bigImg").load(function () {
-            $("img.smallImage").each(function () {
-                let bigImageUrl = $(this).attr("bigImageUrl");
-                img = new Image();
-                img.src = bigImageUrl;
-
-                img.onload = function () {
-                    console.log(bigImageUrl);
-                    $("div.img4load").append($(img));
-
-                };
-            })
-        })
+        $("img.bigImg").load(
+            function(){
+                $("img.smallImage").each(function(){
+                    var bigImageURL = $(this).attr("bigImageURL");
+                    img = new Image();
+                    img.src = bigImageURL;
+                    img.onload = function(){
+                        console.log(bigImageURL);
+                        $("div.img4load").append($(img));
+                    };
+                });
+            }
+        );
+    });
     </script>
     <style>
         div.imgAndInfo{
@@ -60,19 +62,17 @@
 <div class="imgAndInfo">
     <div class="imgInimgAndInfo">
         <img  width="100px" class="bigImg" src="https://how2j.cn/tmall/img/productSingle/8619.jpg">
-
         <div class="smallImageDiv">
-            <img  width="56px" class="smallImage" src="https://how2j.cn/tmall/img/productSingle_small/8620.jpg">
-            <img  width="56px" class="smallImage" src="https://how2j.cn/tmall/img/productSingle_small/8619.jpg">
-            <img  width="56px" class="smallImage" src="https://how2j.cn/tmall/img/productSingle_small/8618.jpg">
-            <img  width="56px" class="smallImage" src="https://how2j.cn/tmall/img/productSingle_small/8617.jpg">
-            <img  width="56px" class="smallImage" src="https://how2j.cn/tmall/img/productSingle_small/8616.jpg">
+            <img  width="100px" class="smallImage"  src="https://how2j.cn/tmall/img/productSingle_small/8620.jpg" bigImageURL="https://how2j.cn/tmall/img/productSingle/8620.jpg">
+            <img  width="100px" class="smallImage" src="https://how2j.cn/tmall/img/productSingle_small/8619.jpg" bigImageURL="https://how2j.cn/tmall/img/productSingle/8619.jpg">
+            <img  width="100px" class="smallImage" src="https://how2j.cn/tmall/img/productSingle_small/8618.jpg" bigImageURL="https://how2j.cn/tmall/img/productSingle/8618.jpg">
+            <img  width="100px" class="smallImage" src="https://how2j.cn/tmall/img/productSingle_small/8617.jpg" bigImageURL="https://how2j.cn/tmall/img/productSingle/8617.jpg">
+            <img  width="100px" class="smallImage" src="https://how2j.cn/tmall/img/productSingle_small/8616.jpg" bigImageURL="https://how2j.cn/tmall/img/productSingle/8616.jpg">
         </div>
-
-        <div class="img4load hidden"></div>
+        <div class="img4load hidden" ></div>
     </div>
-
     <div style="clear:both"></div>
 </div>
+
 </body>
 </html>
