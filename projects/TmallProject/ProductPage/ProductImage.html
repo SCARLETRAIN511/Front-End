@@ -8,24 +8,27 @@
     <link href="../css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
     <script src="../js/bootstrap/3.3.6/bootstrap.min.js"></script>
     <script>
-        $(function(){
-        $("img.smallImage").mouseenter(function(){
-            var bigImageURL = $(this).attr("bigImageURL");
-            $("img.bigImg").attr("src",bigImageURL);
-        });
-        $("img.bigImg").load(
-            function(){
-                $("img.smallImage").each(function(){
-                    var bigImageURL = $(this).attr("bigImageURL");
-                    img = new Image();
-                    img.src = bigImageURL;
-                    img.onload = function(){
-                        console.log(bigImageURL);
-                        $("div.img4load").append($(img));
-                    };
-                });
-            
-    });
+        $(function() {
+            $("img.smallImage").mouseenter(function () {
+                let bigImageURL = $(this).attr("bigImageURL");
+                $("img.bigImg").attr("src", bigImageURL);
+            });
+
+            $("img.bigImg").load(
+                function () {
+                    $("img.smallImage").each(function () {
+                        var bigImageURL = $(this).attr("bigImageURL");
+                        img = new Image();
+                        img.src = bigImageURL;
+                        img.onload = function () {
+                            console.log(bigImageURL);
+                            $("div.img4load").append($(img));
+                        };
+                    });
+                }
+            );
+        })
+
     </script>
     <style>
         div.imgAndInfo{
