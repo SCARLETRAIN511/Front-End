@@ -184,6 +184,20 @@
                 $("button.createOrderButton").removeAttr("disabled","disabled");
             }
         }
+
+        function synSelect() {
+            let selectAll = true;
+            $(".cartProductItemIfSelected").each(function () {
+              if ("false" === $(this).attr("selectit")){
+                  selectAll = false;
+              }
+            });
+            if (selectAll){
+                $("img.selectAllItem").attr("src","https://how2j.cn/tmall/img/site/cartSelected.png");
+            }else{
+                $("img.selectAllItem").attr("src","https://how2j.cn/tmall/img/site/cartNotSelected.png");
+            }
+        }
     </script>
 </head>
 <body>
