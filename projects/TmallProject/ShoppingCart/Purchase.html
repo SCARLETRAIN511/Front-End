@@ -152,6 +152,8 @@
     </style>
 
     <script>
+
+        //进制化金额
         function formatMoney(num){
             num = num.toString().replace(/\$|\,/g,'');
             if (isNaN(num))
@@ -168,6 +170,7 @@
             return (((sign)?'':'-') + num + '.' + cents);
         }
 
+        //turn the button from grey to red
         function synCreateOrderButton() {
             let selectAny = false;
             $(".cartProductItemIfSelected").each(function () {
@@ -185,6 +188,7 @@
             }
         }
 
+        //check if its all selected
         function synSelect() {
             let selectAll = true;
             $(".cartProductItemIfSelected").each(function () {
@@ -199,6 +203,7 @@
             }
         }
 
+        //calculate the money
         function calcCartSumPriceAndNumber() {
             let sum =0;
             let totalNumber = 0;
@@ -216,6 +221,7 @@
             $("span.cartSumNumber").html(totalNumber);
         }
 
+        //calculate the total price
         function syncPrice(pid,num,price) {
             $(".orderItemNumberSetting[pid = "+pid+"]").val(num);
             let cartProductItemSmallSumPrice = formatMoney(num*price);
