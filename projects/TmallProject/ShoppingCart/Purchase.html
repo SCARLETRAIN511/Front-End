@@ -222,6 +222,82 @@
             $(".cartProductItemSmallSumPrice[pid = "+pid+"]").html("￥"+cartProductItemSmallSumPrice);
             calcCartSumPriceAndNumber();
         }
+
+        $(function(){
+            $("img.cartProductItemIfSelected").click(function(){
+                var selectit = $(this).attr("selectit")
+                if("selectit"==selectit){
+                    $(this).attr("src","https://how2j.cn/tmall/img/site/cartNotSelected.png");
+                    $(this).attr("selectit","false")
+                    $(this).parents("tr.cartProductItemTR").css("background-color","#fff");
+                }
+                else{
+                    $(this).attr("src","https://how2j.cn/tmall/img/site/cartSelected.png");
+                    $(this).attr("selectit","selectit")
+                    $(this).parents("tr.cartProductItemTR").css("background-color","#FFF8E1");
+                }
+                syncSelect();
+                syncCreateOrderButton();
+                calcCartSumPriceAndNumber();
+            });
+            $("img.selectAllItem").click(function(){
+                var selectit = $(this).attr("selectit")
+                if("selectit"==selectit){
+                    $("img.selectAllItem").attr("src","https://how2j.cn/tmall/img/site/cartNotSelected.png");
+                    $("img.selectAllItem").attr("selectit","false")
+                    $(".cartProductItemIfSelected").each(function(){
+                        $(this).attr("src","https://how2j.cn/tmall/img/site/cartNotSelected.png");
+                        $(this).attr("selectit","false");
+                        $(this).parents("tr.cartProductItemTR").css("background-color","#fff");
+                    });
+                }
+                else{
+                    $("img.selectAllItem").attr("src","https://how2j.cn/tmall/img/site/cartSelected.png");
+                    $("img.selectAllItem").attr("selectit","selectit")
+                    $(".cartProductItemIfSelected").each(function(){
+                        $(this).attr("src","https://how2j.cn/tmall/img/site/cartSelected.png");
+                        $(this).attr("selectit","selectit");
+                        $(this).parents("tr.cartProductItemTR").css("background-color","#FFF8E1");
+                    });
+                }
+                syncCreateOrderButton();
+                calcCartSumPriceAndNumber();
+            });
+            $(".orderItemNumberSetting").keyup(function(){
+                var pid=$(this).attr("pid");
+                var stock= $("span.orderItemStock[pid="+pid+"]").text();
+                var price= $("span.orderItemPromotePrice[pid="+pid+"]").text();
+                var num= $(".orderItemNumberSetting[pid="+pid+"]").val();
+                num = parseInt(num);
+                if(isNaN(num))
+                    num= 1;
+                if(num<=0)
+                    num = 1;
+                if(num>stock)
+                    num = stock;
+                syncPrice(pid,num,price);
+            });
+            $(".numberPlus").click(function(){
+                var pid=$(this).attr("pid");
+                var stock= $("span.orderItemStock[pid="+pid+"]").text();
+                var price= $("span.orderItemPromotePrice[pid="+pid+"]").text();
+                var num= $(".orderItemNumberSetting[pid="+pid+"]").val();
+                num++;
+                if(num>stock)
+                    num = stock;
+                syncPrice(pid,num,price);
+            });
+            $(".numberMinus").click(function(){
+                var pid=$(this).attr("pid");
+                var stock= $("span.orderItemStock[pid="+pid+"]").text();
+                var price= $("span.orderItemPromotePrice[pid="+pid+"]").text();
+                var num= $(".orderItemNumberSetting[pid="+pid+"]").val();
+                --num;
+                if(num<=0)
+                    num=1;
+                syncPrice(pid,num,price);
+            });
+        })
     </script>
 </head>
 <body>
