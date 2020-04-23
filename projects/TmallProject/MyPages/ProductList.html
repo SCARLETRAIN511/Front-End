@@ -186,8 +186,19 @@
                     $("table[orderStatus]").hide();
                     $("table[orderStatus ="+orderStatus+"]").show();
                 }
-
-            })
+                $("div.orderType div").removeClass("selectedOrderType");
+                $(this).parent("div").addClass("selectedOrderType");
+            });
+            $("a.deleteOrderLink").click(function () {
+                deleteOrderid = $(this).attr("oid");
+                deleteOrder = false;
+                $("#deleteConfirmModal").modal("show");
+            });
+            $("button.deleteConfirmModal").click(function () {
+                deleteOrder = true;
+                $("#deleteConfirmModal").modal("hide");
+            });
+            
 
         })
     </script>
