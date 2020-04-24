@@ -198,8 +198,23 @@
                 deleteOrder = true;
                 $("#deleteConfirmModal").modal("hide");
             });
-            
-
+            $('deleteConfirmModal').on('hidden.bs.modal',function (e) {
+                if (deleteOrder){
+                    let page = "foredeleteOrder";
+                    $.post(
+                        page,
+                        {"oid":deleteOrderid},
+                        function (result) {
+                            if ("success" === result){
+                                $("table.orderListItemTable[oid = "+deleteOrderid+"]").hide();
+                            }
+                            else{
+                                location.href = "login.jsp";
+                            }
+                        }
+                    )
+                }
+            })
         })
     </script>
 </head>
