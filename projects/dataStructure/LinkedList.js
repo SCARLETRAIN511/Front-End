@@ -143,6 +143,7 @@ testLinkedList();
 
 
 //double linkedList
+//双端链表，每个节点有两个指针
 class DoubleNode{
     constructor(value) {
         this.value = value;
@@ -189,8 +190,10 @@ class DoubleLinkedList{
     }
 
     //use traverse to find the index and the node
+    //遍历 ！important
     traverseToIndex(index){
         if (index > this.length){
+            //if the length is 0
             return undefined
         }
         let counter = 0;
