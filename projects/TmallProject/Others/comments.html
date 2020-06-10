@@ -78,6 +78,92 @@
             width:400px;
             height:400px;
         }
+        div.reviewStaticsDiv{
+            margin-top: 20px;
+        }
+        div.reviewStaticsLeft{
+            width: 180px;
+            float: left;
+        }
+        div.reviewStaticsLeftTop{
+            background-color: #C40000;
+            height: 6px;
+        }
+        div.reviewStaticsLeftContent{
+            line-height: 29px;
+            border-left: 1px solid #D5D4D4;
+            border-right: 1px solid #D5D4D4;
+            background-color: #F6F5F1;
+            text-align: center;
+            font-size: 14px;
+            color: #363535;
+            font-weight: bold;
+        }
+        div.reviewStaticsLeftFoot{
+            height: 6px;
+            border-left: 1px solid #D5D4D4;
+            border-bottom: 1px solid #D5D4D4;
+            background-color: #F6F5F1;
+        }
+        span.reviewStaticsNumber{
+            color: #284CA5;
+        }
+        div.reviewStaticsRight{
+            overflow: hidden;
+        }
+        div.reviewStaticsRightEmpty{
+            height: 35px;
+        }
+        div.reviewStaticsFoot{
+            background-color: #F6F5F1;
+            border: 1px solid #D5D4D4;
+            border-left-width: 0px;
+            height: 6px;
+        }
+        div.makeReviewDiv{
+            border: 1px solid #D1CCC8;
+            margin: 20px 0px;
+            background-color: #EFEFEF;
+        }
+        div.makeReviewText{
+            font-size: 16px;
+            color: #333333;
+            font-weight: bold;
+            margin: 20px 40px;
+        }
+        table.makeReviewTable{
+            margin: 20px 40px;
+            font-size: 12px;
+        }
+        table.makeReviewTable td{
+            border: 1px solid #E7E7E7;
+            padding: 10px;
+            background-color: white;
+        }
+        table.makeReviewTable textarea{
+            border-width: 0px;
+            resize: none;
+            width: 420px;
+            height: 120px;
+        }
+        td.makeReviewTableFirstTD{
+            background-color: #F6F6F6;
+        }
+        div.makeReviewButtonDiv{
+            background-color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        div.makeReviewButtonDiv button{
+            width: 72px;
+            height: 26px;
+            border-radius: 2px;
+            background-color: #C40000;
+            color: white;
+            border-width: 0px;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
@@ -108,6 +194,34 @@
             </div>
         </div>
         <div style="clear: both"></div>
+    </div>
+
+    <div class="reviewStaticsDiv">
+        <div class="reviewStaticsLeft">
+            <div class="reviewStaticsLeftTop"></div>
+            <div class="reviewStaticsLeftContent">累计评价 <span class="reviewStaticsNumber"> 13</span></div>
+            <div class="reviewStaticsLeftFoot"></div>
+        </div>
+        <div class="reviewStaticsRight">
+            <div class="reviewStaticsRightEmpty"></div>
+            <div class="reviewStaticsFoot"></div>
+        </div>
+    </div>
+    <div class="makeReviewDiv">
+        <form  method="post">
+            <div class="makeReviewText">其他买家，需要你的建议哦！</div>
+            <table class="makeReviewTable">
+                <tbody><tr>
+                    <td class="makeReviewTableFirstTD">评价商品</td>
+                    <td><textarea name="content"></textarea></td>
+                </tr>
+                </tbody></table>
+            <div class="makeReviewButtonDiv">
+                <input type="hidden" value="952" name="oid">
+                <input type="hidden" value="256" name="pid">
+                <button type="button">提交评价</button>
+            </div>
+        </form>
     </div>
 </div>
 
