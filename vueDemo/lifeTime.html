@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js" type="text/javascript" charset="utf=8"></script>
+
+</head>
+<body>
+<div id = "app">
+    {{msg}}
+</div>
+
+<script type="text/javascript">
+    let vm = new Vue({
+        el:'#app',
+        data:{
+            msg: "highVue",
+        },
+        beforeCreate:function () {
+            console.log("beforeCreate");
+        },
+
+        beforeMount:function () {
+            console.log("beforeMount");
+        }
+
+        created:function(){
+            p
+        }
+    })
+</script>
+
+</body>
+</html>

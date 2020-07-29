@@ -9,11 +9,12 @@
 <div id="app">
     {{a}}
 </div>
+<!--模板语法 插值-->
+<span>Message:{{ msg }}</span>
 
 <script type="text/javascript">
     let data = {a : 1};
     //can usr Object.freeze()去阻止修改现有的property
-    Object.freeze(data)
     let vm = new Vue(
         {
             el:"#app",
