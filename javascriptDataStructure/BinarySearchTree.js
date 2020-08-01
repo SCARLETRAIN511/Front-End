@@ -26,7 +26,7 @@ class BinarySearchTree{
     insertNode(node,newNode){
         if (newNode.data <= node.data){
             if (!node.left){
-                node.left = new;
+                node.left = newNode;
             }else{
                 this.insertNode(node.left,newNode);
             }
