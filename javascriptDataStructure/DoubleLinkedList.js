@@ -47,5 +47,34 @@ class DoubleLinkedList{
 
     remove(nodeData){
         let current = this.head;
+        while (current){
+            if (current.data === nodeData){
+                if (current === this.head && current === this.tail){
+                    this.head = null;
+                    this.tail = null;
+                }else if(current === this.head){
+                    this.head = this.head.next;
+                    this.head.previous = null;
+                }else if(current === this.tail){
+                    this.tail = current.previous;
+                    this.tail.next = null;
+                }else{
+                    current.previous.next = current.next;
+                    current.next.previous = current.previous;
+                }
+                this.length --;
+            }
+            current = current.next;
+        }
     }
 }
+
+let l1 = new DoubleLinkedList();
+l1.addNode(1);
+l1.addNode(2);
+l1.addNode(3);
+l1.addNode(4);
+l1.remove(4);
+console.log(l1);
+
+//for linkedlist, the insertion,get,search,delete all have the complexity o[n];
