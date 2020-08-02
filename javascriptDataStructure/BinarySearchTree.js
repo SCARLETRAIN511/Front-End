@@ -40,7 +40,7 @@ class BinarySearchTree{
     }
 
     remove(nodeData){
-
+        this.root = this.removeNode(this.root, data);
     }
 
     removeNode(node,data){
@@ -54,21 +54,31 @@ class BinarySearchTree{
             node.right = this.removeNode(node.right,data);
             return node;
         }
-        else{
-            if (!node.left && !node.right){
+        else {
+            if (!node.left && !node.right) {
                 node = null;
                 return node;
-            }if (!node.left){
+            }
+            if (!node.left) {
                 node = node.right;
                 return node;
-            }if (!node.right){
+            }
+            if (!node.right) {
                 node = node.left;
                 return node
             }
+            let min = this.findMinNode(node.right);
+            node.data = min.data;
+            node.right = this.removeNode(node.right,min.data);
+            return  node;
         }
+    }
 
-
-
+    findMinNode(node) {
+        while (node.left) {
+            node = node.left;
+        }
+        return node.data;
     }
 }
 
