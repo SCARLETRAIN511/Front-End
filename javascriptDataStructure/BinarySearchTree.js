@@ -80,5 +80,30 @@ class BinarySearchTree{
         }
         return node.data;
     }
+
+    //Treaversal the binary tree
+    inOrder(node){
+        if (node){
+            this.inOrder(node.left);
+            console.log(node.data);
+            this.inOrder(node.right);
+        }
+    }
+
+    preOrder(node){
+        if (node){
+            console.log(node.data);
+            this.preOrder(node.left);
+            this.preOrder(node.right);
+        }
+    }
+
+    postOrder(node){
+        if (node){
+            this.postOrder(node.left);
+            this.postOrder(node.right);
+            console.log(node.data);
+        }
+    }
 }
 
