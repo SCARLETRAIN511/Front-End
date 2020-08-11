@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f5579ede-838b-45a3-b65f-49ecdc84086f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1fOBfXkFkubSK6zAZSU6okmOlzS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../javascriptDataStructureAlgorithms" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RunManager" selected="Node.js.BinarySearchTree.js">
+    <configuration name="BinarySearchTree.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/BinarySearchTree.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="DoubleLinkedList.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/DoubleLinkedList.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="LinkedList.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/LinkedList.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="Queue.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Queue.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="Stack.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/Stack.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.Unnamed" />
+      <item itemvalue="Node.js.Stack.js" />
+      <item itemvalue="Node.js.Queue.js" />
+      <item itemvalue="Node.js.LinkedList.js" />
+      <item itemvalue="Node.js.DoubleLinkedList.js" />
+      <item itemvalue="Node.js.BinarySearchTree.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.BinarySearchTree.js" />
+        <item itemvalue="Node.js.DoubleLinkedList.js" />
+        <item itemvalue="Node.js.LinkedList.js" />
+        <item itemvalue="Node.js.Queue.js" />
+        <item itemvalue="Node.js.Stack.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5579ede-838b-45a3-b65f-49ecdc84086f" name="Default Changelist" comment="" />
+      <created>1596079362219</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596079362219</updated>
+      <workItem from="1596079363451" duration="325000" />
+      <workItem from="1596079715586" duration="4734000" />
+      <workItem from="1596160560173" duration="2306000" />
+      <workItem from="1596266309929" duration="4351000" />
+      <workItem from="1596272713085" duration="1812000" />
+      <workItem from="1596347376601" duration="2029000" />
+      <workItem from="1596443673410" duration="61000" />
+      <workItem from="1596608163066" duration="1816000" />
+      <workItem from="1597127714717" duration="1534000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="730" y="121" key="#Web_Browsers" timestamp="1596079595378">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="730" y="121" key="#Web_Browsers/0.0.1536.824@0.0.1536.824" timestamp="1596079595378" />
+    <state x="388" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596079607556">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="388" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1596079607556" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1597129271239">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597129271239" />
+    <state width="1515" height="211" key="GridCell.Tab.0.bottom" timestamp="1597129272302">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="211" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597129272302" />
+    <state width="1515" height="211" key="GridCell.Tab.0.center" timestamp="1597129272302">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="211" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597129272302" />
+    <state width="1515" height="211" key="GridCell.Tab.0.left" timestamp="1597129272302">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="211" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597129272302" />
+    <state width="1515" height="211" key="GridCell.Tab.0.right" timestamp="1597129272302">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="211" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597129272302" />
+    <state x="270" y="56" key="SettingsEditor" timestamp="1596079477649">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596079477649" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1596608190219">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596608190219" />
+  </component>
+</project>

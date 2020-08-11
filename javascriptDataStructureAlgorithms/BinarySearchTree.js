@@ -143,10 +143,14 @@ class BinarySearchTree{
     }
 }
 
-let t1 = new BinarySearchTree();
-t1.addNode(2);
-t1.addNode(5);
-t1.addNode(1);
-t1.addNode(9);
-console.log(t1);
-console.log(t1.bfsTraversal())
+function main() {
+    let t1 = new BinarySearchTree();
+    t1.addNode(2);
+    t1.addNode(5);
+    t1.addNode(1);
+    t1.addNode(9);
+    console.log(t1);
+    console.log(t1.bfsTraversal());
+}
+
+main();
