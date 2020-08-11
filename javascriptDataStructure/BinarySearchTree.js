@@ -81,7 +81,7 @@ class BinarySearchTree{
         return node.data;
     }
 
-    //Treaversal the binary tree
+    //Traversal the binary tree
     inOrder(node){
         if (node){
             this.inOrder(node.left);
@@ -105,5 +105,48 @@ class BinarySearchTree{
             console.log(node.data);
         }
     }
+
+    //bfs traversal for the binary tree
+    bfsTraversal(){
+        if (!this.root){
+            return;
+        }
+        this.queue = [];
+        this.queue.push(this.root);
+        this.output = [];
+        while (this.queue.length){
+            const node = this.queue.shift();
+            if (node.left){
+                this.queue.push(node.left);
+            }
+            if (node.right){
+                this.queue.push(node.right);
+            }
+            this.output.push(node.data);
+        }
+        return this.output;
+    }
+
+    getMin(){
+        let node = this.root;
+        while (node){
+            node = node.left;
+        }
+        return node.data;
+    }
+    getMax(){
+        let node = this.root;
+        while (node){
+            node = node.right;
+        }
+        return node.data;
+    }
 }
 
+let t1 = new BinarySearchTree();
+t1.addNode(2);
+t1.addNode(5);
+t1.addNode(1);
+t1.addNode(9);
+console.log(t1);
+console.log(t1.bfsTraversal())
