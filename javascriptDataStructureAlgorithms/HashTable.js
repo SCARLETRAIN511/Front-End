@@ -47,3 +47,6 @@ function operation1() {
 }
 
 operation1();
+
+//usually for the hashTable, the complexity for search,add is O(1), but in the worst case like the conflicts are too many,
+//we may get O(n) complexity;
