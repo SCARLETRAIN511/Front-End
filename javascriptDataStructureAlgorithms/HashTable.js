@@ -1,9 +1,10 @@
 //implemention of HashTable
+
 class HashTable{
-    constructor() {
+    constructor(size) {
         this.values = {};
         this.length = 0;
-        this.size = 0;
+        this.size = size;
     }
 
     calculateHashKey(key){
@@ -20,4 +21,22 @@ class HashTable{
         }
         this.values[hash][key] = value;
     }
+
+    search(key){
+        const hash = this.calculateHashKey(key);
+        if (this.values.hasOwnProperty(hash) && this.values[hash].hasOwnProperty(key)){
+            return this.values[hash][key];
+        }else {
+            return null;
+        }
+    }
 }
+
+function operation1() {
+    let h1 = new HashTable(10);
+    h1.add(1,"Hello");
+    h1.add(10,"Olleh");
+    console.log(h1.values);
+}
+
+operation1();
