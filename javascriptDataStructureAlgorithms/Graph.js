@@ -19,9 +19,11 @@ class Graph{
     //print the graph
     print(){
         const keys = this.adjList.keys();
+        //find all the keys
         for (let i of keys){
             const values = this.adjList.get(i);
             let value = "";
+            //add all the adjacent nodes of the same keys
             for (let j of values){
                 value += j + " ";
             }
