@@ -1,4 +1,4 @@
-//implemention of HashTable
+//implementation of HashTable
 
 class HashTable{
     constructor(size) {
