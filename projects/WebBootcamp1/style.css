@@ -1,0 +1,41 @@
+h1,h2{
+    color: orange;
+    background-color: aliceblue;
+    text-align: center;
+    font-family: "Segoe UI Black";
+}
+input {
+    color: aqua;
+    background-color: mediumseagreen
+
+}
+#theThirdOne{
+    background-color: black;
+}
+.HH2{
+    background-color: black;
+}
+span.ss{
+    color: bisque;
+    background-color: black;
+}
+button{
+    color: magenta;
+    background-color: aqua;
+    text-align: center;
+    font-weight: bold;
+}
+
+p{
+    color: mediumseagreen;
+    background-color: bisque;
+    text-align: center;
+    font-size: 20px;
+    font-family: AcadEref;
+}
+div > li{
+    color: mediumseagreen;
+}
+div >li:hover{
+    color: magenta;
+}
